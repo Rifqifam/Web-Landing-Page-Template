@@ -1,0 +1,711 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$jumbo-bg : url("../assets/hunters-race-MYbhN8KaaEc-unsplash.png");
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+
+
+//  Start Navbar css
+
+
+.padx{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    @include md{
+        padding-right: 14rem;
+        padding-left: 14rem;
+        padding-top: 2rem;
+    }
+
+    .padin{
+        @include sm{
+            border-radius: 5px;
+        }
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 20px;
+        
+    }
+
+    .navbar-nav {
+
+
+        padding-right: 10px;
+
+        li {
+            margin-bottom: 10px;
+
+            a{
+            font-weight: 200;
+            color: white;
+            font-size: 22px;
+            text-align: right;
+        
+            @include md{
+                font-size: 20px;
+                font-weight: 600;
+                text-align: center;
+                }
+            }
+    
+        }
+    }
+
+
+}
+// End Navbar CSS
+
+// JumboTron
+
+.jumbotron{
+    content: "";
+    background-image: $jumbo-bg;
+    background-size: auto;
+    min-height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    @include sm{
+        height: 100vh;
+        min-width: 100vh;
+
+    }
+
+
+    .h1-container{
+        margin-top: auto;
+        margin-bottom: auto;
+        overflow-wrap: normal;
+        width: 70%;
+        @include sm{
+            width: 25%
+        }
+        h1{
+
+            text-align: center;
+            color:white;
+            font-size: 45px;
+
+            @include sm{
+                font-size: 50px;
+            }
+        }
+    }
+
+}
+
+// Jumbotron Ends
+
+// profile start
+
+#profile{
+    width: auto;
+    min-height: 100vh;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include lg{
+        flex-direction: row;
+    }
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    content: "";
+    transition: all;
+    transition-duration: 300;
+
+    .container-foto{
+        max-width: 40vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: auto;
+
+        @include lg{
+            margin-right: 5rem;
+
+        }
+
+        img{
+            width: 300px;
+
+            @include md{
+                width: 400px;
+            }
+
+            @include lg{
+                width: 500px;
+            }
+            
+        }
+        
+    }
+
+    .container-text{
+        display: flex;
+        max-width: 75%;
+        @include lg{
+            max-width: 25vw;
+        }
+        flex-direction: column;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: auto;
+        margin-left:auto;
+
+        @include lg{
+            margin-top : auto;
+            margin-left: 0;
+        }
+
+        h2{
+            margin-top: 3rem;
+            @include lg{
+                margin-top: 0;
+            }
+        }
+
+        p{
+            text-align: justify;
+            margin-top: 1rem;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .about-us{
+            display: flex;
+            margin-right: auto;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all;
+            transition-duration: 300;
+            
+
+            p{
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-right: 0.3rem;
+                font-weight: 700;
+                color: rgb(58, 58, 58);
+            }
+
+            ion-icon{
+                margin-top: auto;
+                margin-bottom: auto;
+                color: #a1875a;
+            }
+        }
+
+        .about-us:hover{
+            scale: 120%;
+            margin-left: 0.7rem;
+        }
+
+    }
+}
+
+// profile ends
+
+// Why start
+
+#why{
+    background: #eeee;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-height: 30vh;
+    content: "";
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+    text-align: center;
+
+    @include md{
+        padding-top: 8rem;
+    }
+
+    .title{
+        h2{
+            font-size:45px;
+        }
+    }
+
+    .points{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        @include lg{
+            flex-direction: row;
+            margin-top: 2rem;
+        }
+        margin: auto;
+
+        .point1, .point2, .point3{
+            margin-left: auto;
+            margin-right: auto;
+            @include lg{
+                margin-left:0;
+                margin-right:0;
+            }
+
+            min-width: 25rem;
+
+            h1{
+                font-weight: 700;
+                color :#a1875e;
+                font-size: 60px;
+                margin-top: 2rem;
+                @include lg{
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+
+}
+
+// Why Ends
+
+
+// Start Principle
+
+#strategy{
+    background: rgba(216, 216, 216, 0.933);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-height: 30vh;
+    content: "";
+    justify-content: flex-start;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+
+
+    @include md{
+        padding-top: 8rem;
+    }
+
+    .main-title{
+        text-align: center;
+        h2{
+            font-size:45px;
+        }
+    }
+
+
+
+    .strat1, .strat2, .strat3{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 70vw;
+
+        @include md{
+            max-width: 60vw;
+        }
+
+        @include xl{
+            max-width: 40vw;
+        }
+
+
+        .title{
+            display: flex;
+            justify-content: left;
+            gap: 1rem;
+
+            span{
+                background-color: #a1875e;
+                border-radius: 800px;
+                padding: 0.2rem 0.7rem ;
+                font-weight: 500;
+                font-size: 17px;
+                text-align: center;
+                margin-top: auto;
+                margin-bottom: auto;
+                color: white;
+                
+            }
+            
+            h3{
+                margin-top: auto;
+                margin-bottom: auto;
+                font-size: 25px;
+
+            }
+        }
+
+        h4{
+            font-size: 18px;
+            text-align: justify;
+            opacity: .8;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        img{
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+
+        
+    }
+
+    .about-us-why{
+        display: flex;
+        margin-right: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all;
+        transition-duration: 300;
+        margin-left: auto;
+        margin-top: 4rem;
+        
+
+        p{
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 0.3rem;
+            font-weight: 700;
+            opacity: .7;
+        }
+
+        ion-icon{
+            margin-top: auto;
+            margin-bottom: auto;
+            color: #a1875a;
+        }
+    }
+
+    .about-us-why:hover{
+        scale: 120%;
+    }
+}
+
+// End Principle
+
+// Start CTA
+
+#cta{
+
+    width: auto;
+    min-height: 70vh;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include lg{
+        flex-direction: row;
+    }
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    content: "";
+    transition: all;
+    transition-duration: 300;
+
+    .container-foto{
+        max-width: 40vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: auto;
+
+        @include lg{
+
+        }
+
+        img{
+            width: 300px;
+
+            @include md{
+                width: 400px;
+            }
+
+            @include lg{
+                width: 500px;
+            }
+            
+        }
+        
+    }
+
+    .container-text-cta{
+        display: flex;
+        max-width: 75%;
+        @include lg{
+            max-width: 25vw;
+        }
+        flex-direction: column;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left:auto;
+
+        @include lg{
+            margin-top : auto;
+            margin-right:0;
+        }
+
+        h2{
+            margin-top: 3rem;
+            @include lg{
+                margin-top: 0;
+            }
+        }
+
+        p{
+            text-align: justify;
+            margin-top: 1rem;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .about-us-cta{
+            display: flex;
+            margin-right: auto;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all;
+            transition-duration: 300;
+            margin-bottom: 2rem;
+            
+            @include lg{
+                margin-top: 1rem;
+                margin-bottom: 0;
+            }
+            
+
+            p{
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-right: 0.3rem;
+                font-weight: 700;
+                color: rgb(58, 58, 58);
+            }
+
+            ion-icon{
+                margin-top: auto;
+                margin-bottom: auto;
+                color: #a1875a;
+            }
+        }
+
+        .about-us-cta:hover{
+            scale: 120%;
+            margin-left: 0.7rem;
+        }
+
+    }
+}
+
+
+// End CTA
+
+// Start Feature
+
+#feature{
+    background-color: white;
+    min-height: 40vh;
+    height: fit-content;
+    margin-top: 5rem;
+
+    .foto{
+        gap: 3rem;
+        margin-bottom: 2rem;
+
+        @include lg{
+            margin-bottom: 0;
+        }
+    }
+    h3{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+
+}
+
+
+// End Feature
+
+//Footer Navbar Start
+
+#footer-nav{
+    background: rgba(216, 216, 216, 0.933);
+    text-align: left;
+    padding: 3rem;
+    gap: 5rem;
+    color: rgb(102, 102, 102);
+
+
+
+    .sub-footer{
+        display: flex;
+        flex-direction: column;
+
+        h5{
+            font-size: 16px;
+            margin-bottom: 0.8rem;
+        }
+
+        .icon{
+            margin-top: 5px;
+        }
+        form{
+            display: flex;
+            margin-bottom: 1rem;
+
+            input{
+                padding: 0.3rem 0.5rem;
+            }
+            button{
+                width: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border:  solid black;
+                border-width: 1px 1px 1px 0px;
+    
+    
+                ion-icon{
+                    margin: auto;
+                }
+            }
+
+            button:active{
+                width: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border:  solid black;
+                border-width: 2px 2px 2px 2px;
+    
+    
+                ion-icon{
+                    margin: auto;
+                }
+            }
+
+        }
+    }
+
+    .sub-footer:nth-child(2){
+        margin-right: 12rem;
+        
+        p{
+            margin-bottom: .4rem;
+        }
+
+    }
+
+    .socmed{
+        display: flex;
+        gap: 10px;
+
+
+        img{
+            height: 20px;
+            width: auto;
+        }
+
+    }
+
+
+    
+}
+
+//Footer Navbar Ends
+
+
+// Footer Copy Rights
+
+#copyright{
+    background-color: #0D1931;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color:#9F8354;
+    font-size: 12px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    div{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    img{
+        height: auto;
+        width: 120px;
+    }
+
+    p{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    @include md{
+        min-height: 10vh;
+    }
+}
+
+
+
+
